@@ -27,6 +27,7 @@ app.use(
 MongoConnection(process.env.MONGO_URL).then(() => {
   console.log(" Database connected successfully");
 });
+//,{ "src": "/(.*)", "dest":"/users"},{ "src": "/(.*)", "dest":"/admin"},{ "src": "/(.*)", "dest":"/result"}
 
 app.use("/users", UserRouter);
 app.use("/admin", candidateRouter);
