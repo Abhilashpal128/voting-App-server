@@ -11,6 +11,9 @@ const {
 const { handleUserSession } = require("../Middleware/user");
 
 candidateRouter.post("/admin/addCandidate", handleAddCandidate);
+candidateRouter.get("/admin/addCandidate", (req, res) => {
+  res.send("hello this route is working");
+});
 candidateRouter.post("/admin/userVote/:id");
 candidateRouter.get("/admin/candidate/:id", handlesingleCandidateFetch);
 candidateRouter.get(

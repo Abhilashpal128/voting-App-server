@@ -10,7 +10,7 @@ const {
 } = require("../controller/user");
 const { handleUserSession } = require("../Middleware/user");
 
-userRouter.get("/", handleGetRoute);
+userRouter.get("/users", handleGetRoute);
 
 userRouter.post("/users/", handleUserRegister);
 userRouter.post("/users/login", handleUserLogin);
