@@ -9,9 +9,9 @@ const cors = require("cors");
 
 const app = express();
 const corsOptions = {
-  origin: "https://voting-app-client.vercel.app", // Allow requests from this origin
-  methods: "GET,POST", // Allow only specified HTTP methods
-  optionsSuccessStatus: 200, // Some legacy browsers choke on 204
+  origin: ["https://voting-app-client.vercel.app", "http://localhost:3000"],
+  optionsSuccessStatus: 200,
+  credentials: true, // Some legacy browsers choke on 204
 };
 app.use(cors(corsOptions));
 app.use(express.json());
