@@ -8,7 +8,12 @@ const resultRouter = require("./routes/Result");
 const cors = require("cors");
 
 const app = express();
-app.use(cors());
+const corsOptions = {
+  origin: "https://voting-app-server-gray.vercel.app", // Allow requests from this origin
+  methods: "GET,POST", // Allow only specified HTTP methods
+  optionsSuccessStatus: 200, // Some legacy browsers choke on 204
+};
+app.use(cors(corsOptions));
 app.use(express.json());
 
 app.use(
