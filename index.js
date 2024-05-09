@@ -5,17 +5,18 @@ const UserRouter = require("./routes/user");
 const candidateRouter = require("./routes/candidate");
 const session = require("express-session");
 const resultRouter = require("./routes/Result");
-const cors = require("cors");
+// const cors = require("cors");
+const corsAnywhere = require("cors-anywhere");
 
 const app = express();
-const corsOptions = {
-  origin: ["https://voting-app-client.vercel.app", "http://localhost:3000"],
-  optionsSuccessStatus: 200,
-  credentials: true, // Some legacy browsers choke on 204
-};
-app.use(cors(corsOptions));
+// const corsOptions = {
+//   origin: ["https://voting-app-client.vercel.app", "http://localhost:3000"],
+//   optionsSuccessStatus: 200,
+//   credentials: true, // Some legacy browsers choke on 204
+// };
+// app.use(cors(corsOptions));
 app.use(express.json());
-
+app.use(corsAnywhere());
 app.use(
   session({
     secret: process.env.MY_SESSION_SECRET_KEY,
