@@ -12,9 +12,9 @@ const { handleUserSession } = require("../Middleware/user");
 
 userRouter.get("/", handleGetRoute);
 
-userRouter.post("/", handleUserRegister);
-userRouter.post("/login", handleUserLogin);
-userRouter.post("/voting/:id", handleUserVote);
-userRouter.get("/candidate/:id", handlefetchAllCandidate);
+userRouter.post("/users/", handleUserRegister);
+userRouter.post("/users/login", handleUserLogin);
+userRouter.post("/users/voting/:id", handleUserVote);
+userRouter.get("/users/candidate/:id", handlefetchAllCandidate);
 
 module.exports = userRouter;

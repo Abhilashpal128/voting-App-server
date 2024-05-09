@@ -10,14 +10,14 @@ const {
 } = require("../controller/candidate");
 const { handleUserSession } = require("../Middleware/user");
 
-candidateRouter.post("/addCandidate", handleAddCandidate);
-candidateRouter.post("/userVote/:id");
-candidateRouter.get("/candidate/:id", handlesingleCandidateFetch);
+candidateRouter.post("/admin/addCandidate", handleAddCandidate);
+candidateRouter.post("/admin/userVote/:id");
+candidateRouter.get("/admin/candidate/:id", handlesingleCandidateFetch);
 candidateRouter.get(
-  "/candidates/:id",
+  "/admin/candidates/:id",
 
   handleFetchCandidateByAdmin
 );
-candidateRouter.get("/logout", handleSessiondestroy);
+candidateRouter.get("/admin/logout", handleSessiondestroy);
 
 module.exports = candidateRouter;

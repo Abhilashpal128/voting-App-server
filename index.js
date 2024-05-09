@@ -29,9 +29,9 @@ MongoConnection(process.env.MONGO_URL).then(() => {
 });
 //,{ "src": "/(.*)", "dest":"/users"},{ "src": "/(.*)", "dest":"/admin"},{ "src": "/(.*)", "dest":"/result"}
 
-app.use("/users", UserRouter);
-app.use("/admin", candidateRouter);
-app.use("/result", resultRouter);
+app.use("/", UserRouter);
+app.use("/", candidateRouter);
+app.use("/", resultRouter);
 
 // app.get("/all", async (req, res) => {
 //   const allData = await candidateModel.find().populate("voters_id");

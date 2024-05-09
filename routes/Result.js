@@ -4,6 +4,6 @@ const { DeclareResults } = require("../controller/Result");
 
 const resultRouter = express.Router();
 
-resultRouter.post("/declare/:id", DeclareResults);
+resultRouter.post("/result/declare/:id", DeclareResults);
 
 module.exports = resultRouter;
