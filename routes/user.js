@@ -12,7 +12,7 @@ const { handleUserSession } = require("../Middleware/user");
 
 userRouter.get("/users", handleGetRoute);
 
-userRouter.post("/users/", handleUserRegister);
+userRouter.post("/users", handleUserRegister);
 userRouter.post("/users/login", handleUserLogin);
 userRouter.post("/users/voting/:id", handleUserVote);
 userRouter.get("/users/candidate/:id", handlefetchAllCandidate);
