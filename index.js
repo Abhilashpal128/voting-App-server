@@ -15,7 +15,7 @@ const app = express();
 // };
 app.use(
   cors({
-    origin: "https://voting-app-client.vercel.app",
+    origin: ["https://voting-app-client.vercel.app", "http://localhost:3000"],
   })
 );
 app.use(express.json());
